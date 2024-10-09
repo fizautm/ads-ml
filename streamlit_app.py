@@ -48,6 +48,9 @@ target_mapper = {'Adelie': 0,
 def target_encode(val):
   return target_mapper[val]
 
+y = y_raw.apply(target_encode)
+y
+
 #Encode y
 encode = ['island', 'sex']
 df_penguins = pd.get_dummies(input_penguins, prefix=encode)
