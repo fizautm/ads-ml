@@ -7,7 +7,7 @@ st.title('🤖 Agile Data Science')
 
 st.write('This is app builds a machine learning model')
 
-with st.expander('Data Penguin'):
+with st.expander('Data'):
   st.write('**Raw Data**')
   df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/penguins_cleaned.csv')
   df
@@ -66,7 +66,7 @@ def target_encode(val):
 y = y_raw.apply(target_encode)
 
 
-with st.expander('Data Preparation'):  
+with st.expander('Data Preparation XX'):  
   st.write('**Encoded X Input Penguins**')
   input_row
   st.write('Encoded Y')
