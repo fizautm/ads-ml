@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 
 st.title('🤖 Agile Data Science')
 
@@ -68,3 +69,14 @@ with st.expander('Data Preparation'):
   input_row
   st.write('Encoded Y')
   y
+
+#Model Training and inference
+#Train the ML model
+clf = RandomForestClassifier()
+clf.fit(x_raw, y)
+
+#Apply model to make predictions
+prediction = clf.predict(input_row)
+prediction_proba = clf.predict_proba(input_row)
+prediction_proba
+
